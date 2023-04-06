@@ -33,7 +33,7 @@ int main() {
 }
 
 ```
-[題解]()
+[題解](https://github.com/chenangel89/111-Computer-Programming-II/blob/main/%23472%09Joe's%20Bag.md)
 
 ### 474	Number Divider
 [題目](https://noj.tw/course/111-Computer-Programming-II/problem/474)
