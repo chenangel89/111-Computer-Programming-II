@@ -6,6 +6,54 @@
 
 ### 473	String sorting by index
 
+[題目](https://noj.tw/course/111-Computer-Programming-II/problem/473)
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LEN 40 // 字串的最大長度
+#define NUM_STRS 12 // 字串的數量
+
+int main() {
+    char zodiac[NUM_STRS][MAX_LEN];
+    int index[NUM_STRS];
+
+    // 讀入所有的字串
+    for (int i = 0; i < NUM_STRS; i++) {
+        scanf("%s", zodiac[i]);
+        index[i] = i;
+    }
+
+    // 對所有的字串進行排序，同時更新編號序列
+    for (int i = NUM_STRS-2; i >= 1; i--) {
+        for (int j = 0; j <= i; j++) {
+            if (strcmp(zodiac[j], zodiac[j+1]) > 0) {
+                // 交換兩個字串
+
+                char temp[MAX_LEN];
+                strcpy(temp, zodiac[j]);
+                strcpy(zodiac[j], zodiac[j+1]);
+                strcpy(zodiac[j+1], temp);
+
+                // 更新編號序列
+                int tempIndex = index[j];
+                index[j] = index[j+1];
+                index[j+1] = tempIndex;
+            }
+        }
+    }
+
+    // 輸出排序後的編號
+    for (int i = 0; i < NUM_STRS; i++) {
+        printf("%d\n", index[i]);
+    }
+
+    return 0;
+}
+
+```
+
 ### 472	Joe's Bag
 [題目](https://noj.tw/course/111-Computer-Programming-II/problem/472)
 ```c
