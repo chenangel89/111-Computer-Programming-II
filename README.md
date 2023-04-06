@@ -31,3 +31,4 @@ int main()
 }
 
 ```
+[題解](https://github.com/chenangel89/111-Computer-Programming-II/blob/main/%23474%20-%20Number%20Divider.md)
