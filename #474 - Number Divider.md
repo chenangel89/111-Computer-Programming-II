@@ -18,8 +18,10 @@ int main()
     return 0;
 }
 ```
+<table>
 <tr><th>600</th><th>510</th><th>420</th><th>330</th><th>222</th><th>321</th><th>411</th></tr>
 <tr><td>60</td><td>51</td><td>42</td><td>33</td><td>111</td><td>210</td><td>300</td></tr>
+</table>
 
 600 510 420 330 222 321 411  
 60  51  42  33  111 210 300  
