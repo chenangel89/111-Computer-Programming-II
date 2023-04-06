@@ -9,10 +9,9 @@
 ### 472	Joe's Bag
 
 ### 474	Number Divider
+[題目](https://noj.tw/course/111-Computer-Programming-II/problem/474)
 ```c
 #include<stdio.h>
-#include<stdlib.h>
-
 #define N 201
 
 int main()
@@ -30,4 +29,5 @@ int main()
     printf("%d\n", dp[m][n]);
     return 0;
 }
+
 ```
