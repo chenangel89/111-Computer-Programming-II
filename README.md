@@ -3,6 +3,56 @@
 ## Homework 2
 
 ### 471	Real Wordle
+[題目](https://noj.tw/course/111-Computer-Programming-II/problem/471)
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LEN 5
+
+int main()
+{
+    char guess[MAX_LEN+1]; // 玩家猜測的字串
+    char answer[MAX_LEN+1]; // 謎底
+    char result[MAX_LEN+1]; // 猜測結果
+
+    scanf("%s", guess);
+    scanf("%s", answer);
+
+    int i, j;
+
+    // 先處理綠色(G)
+    for (i = 0; i < MAX_LEN; i++) {
+        if (guess[i] == answer[i]) {
+            result[i] = 'G';
+            guess[i] = answer[i] = ' ';
+        } else {
+            result[i] = '-';
+        }
+    }
+
+    // 再處理黃色(Y)和白色(-)
+    for (i = 0; i < MAX_LEN; i++) {
+        if (result[i] == '-') {
+            for (j = 0; j < MAX_LEN; j++) {
+                if (guess[i] == answer[j]) {
+                    result[i] = 'Y';
+                    answer[j] = ' ';
+                    break;
+                }
+            }
+        }
+    }
+
+    result[MAX_LEN] = '\0';
+
+    printf("%s\n", result);
+
+    return 0;
+}
+
+```
 
 ### 473	String sorting by index
 
