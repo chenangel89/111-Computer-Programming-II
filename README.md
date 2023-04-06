@@ -7,6 +7,33 @@
 ### 473	String sorting by index
 
 ### 472	Joe's Bag
+[題目](https://noj.tw/course/111-Computer-Programming-II/problem/472)
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n, m, i, j;
+    scanf("%d", &n);
+    int coins[n];
+    for (i = 0; i < n; i++) {
+        scanf("%d", &coins[i]);
+    }
+    scanf("%d", &m);
+    int dp[m+1];
+    memset(dp, 0, sizeof(dp));
+    dp[0] = 1;
+    for (i = 0; i < n; i++) {
+        for (j = m; j >= coins[i]; j--) {
+            dp[j] += dp[j-coins[i]];
+        }
+    }
+    printf("%d\n", dp[m]);
+    return 0;
+}
+
+```
+[題解]()
 
 ### 474	Number Divider
 [題目](https://noj.tw/course/111-Computer-Programming-II/problem/474)
